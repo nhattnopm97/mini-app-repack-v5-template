@@ -11,8 +11,8 @@
     "test": "jest",
     "pod": "cd ios && RCT_NEW_ARCH_ENABLED=0 pod install && cd ..",
     "bundle": "npm run bundle:ios && npm run bundle:android",
-    "bundle:ios": "react-native bundle --platform ios --entry-file index.js --dev false",
-    "bundle:android": "react-native bundle --platform android --entry-file index.js --dev false"
+    "bundle:ios": "react-native bundle --platform ios --entry-file index.js --dev true --config ./rspack.config.mjs",
+    "bundle:android": "react-native bundle --platform android --entry-file index.js --dev true --config ./rspack.config.mjs"
   },
   "dependencies": {
     "@module-federation/enhanced": "0.11.3",
