@@ -51,7 +51,40 @@ export default env => {
         // remotes: {
         //   auth: `auth@http://localhost:9003/${platform}/mf-manifest.json`,
         // },
-        shared: getSharedDependencies({eager: STANDALONE}),
+        shared: {
+          react: {singleton: true, eager: false, requiredVersion: '19.0.0'},
+          'react-native': {
+            singleton: true,
+            eager: false,
+            requiredVersion: '0.78.2',
+          },
+          '@react-navigation/native': {
+            singleton: true,
+            eager: false,
+            requiredVersion: '7.0.14',
+          },
+          '@react-navigation/native-stack': {
+            singleton: true,
+            eager: false,
+            requiredVersion: '7.2.0',
+          },
+          zustand: {singleton: true, eager: false, requiredVersion: '5.0.5'},
+          'react-native-safe-area-context': {
+            singleton: true,
+            eager: false,
+            requiredVersion: '5.3.0',
+          },
+          'react-native-screens': {
+            singleton: true,
+            eager: false,
+            requiredVersion: '4.10.0',
+          },
+          '@react-native-async-storage/async-storage': {
+            singleton: true,
+            eager: false,
+            requiredVersion: '2.0.0',
+          },
+        },
       }),
       new Repack.plugins.CodeSigningPlugin({
         enabled: mode === 'production',
