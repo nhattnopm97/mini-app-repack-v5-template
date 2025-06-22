@@ -47,7 +47,10 @@ export default env => {
         dts: false,
         exposes: STANDALONE
           ? undefined
-          : {'./CtnMini': './src/navigation/index.tsx'}, //Users/fis-it/Documents/extra-job/miniAppTest/src/navigation/index.tsx
+          : {
+              './CtnMini':
+                './src/navigation/NavigationHaveNavigationContainer.tsx',
+            }, //Users/fis-it/Documents/extra-job/miniAppTest/src/navigation/NavigationHaveNavigationContainer.tsx
         // remotes: {
         //   auth: `auth@http://localhost:9003/${platform}/mf-manifest.json`,
         // },
